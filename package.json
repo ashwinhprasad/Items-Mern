@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server.js",
-    "server":"nodemon server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server \" \"npm run client\""
   },
   "author": "AshwinPrasad",
   "license": "ISC",
@@ -15,6 +17,8 @@
     "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.11",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "react-router-dom": "^5.2.0",
+    "uuid": "^8.3.1"
   }
 }
